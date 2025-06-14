@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/34cb1328cd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1><span>Welcome</span> to MindZen</h1>
+    <p>Your ultimate solution for <span>everything!</span></p>
+   
+  </header>
+
+  <section class="product-description">
+    <img src="product.png" alt="MindZen" class="product-image">
+    <img src="product-2.png" alt="MindZen" class="product-2-image">
+    <div class="product-details">
+      <h2>About MindZen</h2>
+      <p>MindZen is a smart meditation headband that uses brainwave sensors and
+         AI to help you focus, relax, and meditate more effectively. It connects
+         with an app to give you real-time feedback on your stress and focus levels.<br>
+        🔹 Why this product is great for your landing page:<br>
+          ✨ Modern and tech-based — attracts interest<br>
+          💬 Easy to write a catchy headline (e.g., “Calm Your Mind with Science”)<br>
+          🧘‍♂️ Fits well with clean, minimalist design styles<br>
+         📩 Newsletter signup fits perfectly for users to get mental health tips</p>
+      <button class="cta-button">Buy Now</button>
+    </div>
+  </section>
+
+  <section class="signup-form">
+    <h3>Stay Updated</h3>
+    <p>Subscribe to our newsletter to get the latest updates on Mindzen!</p>
+    <form name="submit-to-google-sheet">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="subscribe">
+          <input type="checkbox"  id="subscribe" name="subscribe" checked>
+          Subscribe to updates
+        </label>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Subscribe" class="submit-btn">
+      </div>
+    </form>
+    <span id="msg"></span>
+  </section>
+
+  <footer>
+     <div class="copyright">
+            <p>copyright @2025 Product Mindzen. All rights reserved. <i class="fa-brands fa-sketch"></i></p>
+        </div>
+  </footer>
+   <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwiV--5z6XQaS9VJ6sF4Otw1km8JVCc5YDarmzOdoj7FuD6vidCRjGRr4BWvFVu3Rb8aA/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+   
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  
+}
+
+header {
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header span{
+  color: red;
+}
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.product-description {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.product-image {
+  max-width: 100%;
+  height: 50vh;
+  padding: 10px;
+  border-radius:50px;
+  transition: 0.5s;
+}
+.product-2-image {
+  max-width: 200%;
+  height: 50vh;
+  padding: 10px;
+  border-radius:50px;
+  transition: 0.5s;
+}
+.product-image:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.product-2-image:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.product-details {
+  max-width: 700px;
+  margin-left: 10px;
+  
+}
+
+.product-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  
+}
+
+
+
+.cta-button {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1); /* Zooms in the button */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds subtle shadow */
+}
+
+/* Signup Form */
+.signup-form {
+  background-color: black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+p{
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+input[type="text"]:focus
+input[type="email"]:focus{
+  outline: none;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.submit-btn {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: black;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+  .product-description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-details {
+    margin-left: 0;
+    text-align: center;
+  }
+  
+}
+#msg{
+    color: green;
+    margin-top: -5px;
+    display: block;
+    text-align: center;
+    
+}
+
